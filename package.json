@@ -3,9 +3,22 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm run build --prefix client",
+    "dev": "concurrently -k \"node server.js\" \"npm run dev --prefix client\"",
+    "dev:server": "node server.js",
+    "dev:client": "npm run dev --prefix client"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.0",
+    "google-auth-library": "^9.15.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
   }
 }

@@ -29,11 +29,18 @@ export const features = [
   }
 ];
 
+// Import images
+import santoriniImg from '../bougainvillea-santorini-white-village-beautiful (1).jpg';
+import barcelonaImg from '../barcelona.jpg';
+import icelandImg from '../iceland.jpg';
+import japanImg from '../japan.jpg';
+import parisImg from '../paris.jpg';
+
 export const destinations = [
   {
     id: 1,
     name: "Santorini, Greece",
-    image: "🇬🇷",
+    image: santoriniImg,
     price: "$1,199",
     duration: "7 days",
     rating: 4.9,
@@ -42,7 +49,7 @@ export const destinations = [
   {
     id: 2,
     name: "Maldives",
-    image: "🏖️",
+    image: icelandImg, // Reusing Iceland for tropical/water scenery
     price: "$2,499",
     duration: "10 days",
     rating: 5.0,
@@ -51,7 +58,7 @@ export const destinations = [
   {
     id: 3,
     name: "Swiss Alps",
-    image: "🏔️",
+    image: icelandImg, // Reusing Iceland for mountain scenery
     price: "$1,799",
     duration: "8 days",
     rating: 4.8,
@@ -60,11 +67,56 @@ export const destinations = [
   {
     id: 4,
     name: "Dubai, UAE",
-    image: "🕌",
+    image: barcelonaImg, // Reusing Barcelona for city scenery
     price: "$1,599",
     duration: "6 days",
     rating: 4.7,
     reviews: 298
+  },
+  {
+    id: 5,
+    name: "Bali, Indonesia",
+    image: japanImg, // Reusing Japan for Asian tropical scenery
+    price: "$899",
+    duration: "9 days",
+    rating: 4.9,
+    reviews: 412
+  },
+  {
+    id: 6,
+    name: "Paris, France",
+    image: parisImg,
+    price: "$1,399",
+    duration: "5 days",
+    rating: 4.8,
+    reviews: 567
+  },
+  {
+    id: 7,
+    name: "Tokyo, Japan",
+    image: japanImg,
+    price: "$1,899",
+    duration: "8 days",
+    rating: 5.0,
+    reviews: 345
+  },
+  {
+    id: 8,
+    name: "Iceland",
+    image: icelandImg,
+    price: "$2,199",
+    duration: "7 days",
+    rating: 4.9,
+    reviews: 223
+  },
+  {
+    id: 9,
+    name: "Barcelona, Spain",
+    image: barcelonaImg,
+    price: "$1,299",
+    duration: "6 days",
+    rating: 4.8,
+    reviews: 287
   }
 ];
 

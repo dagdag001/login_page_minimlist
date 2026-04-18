@@ -1,13 +1,59 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Search, CheckCircle2, Star } from "lucide-react";
+import { CheckCircle2, Star } from "lucide-react";
 import { travelCards } from "../../constants/landingPageData";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative overflow-hidden min-h-screen flex flex-col items-center px-4 sm:px-6 lg:px-8">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        {/* Gradient Orbs */}
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            x: [0, 50, 0],
+            y: [0, 30, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-orange-200 to-orange-300 rounded-full blur-3xl opacity-30"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            x: [0, -30, 0],
+            y: [0, 50, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-blue-200 to-purple-300 rounded-full blur-3xl opacity-20"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.1, 1],
+            x: [0, 40, 0],
+            y: [0, -40, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+          className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-br from-pink-200 to-orange-200 rounded-full blur-3xl opacity-25"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto w-full flex-1 flex items-center">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center w-full">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -41,8 +87,10 @@ export function Hero() {
                 </motion.span>
               </Link>
               
-              <button className="px-8 py-4 bg-white text-gray-700 rounded-2xl border-2 border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center space-x-2">
-                <Search className="w-5 h-5" />
+              <button 
+                onClick={() => document.getElementById('destinations-section')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 bg-white text-gray-700 rounded-2xl border-2 border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center space-x-2"
+              >
                 <span>Browse Destinations</span>
               </button>
             </div>
@@ -97,6 +145,7 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+
     </section>
   );
 }

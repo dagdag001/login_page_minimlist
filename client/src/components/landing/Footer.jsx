@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import Logo from '../Logo'
 
 export function Footer () {
   return (
@@ -6,9 +7,8 @@ export function Footer () {
       <div className='mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 max-md:flex-col sm:px-6 sm:py-6 md:gap-6 md:py-8'>
         <a href='#'>
           <div className='flex items-center gap-3'>
-            LOGO
-            {/* Replace with <Logo className='gap-3' /> if needed */}
-          </div>
+            <Logo/>
+aA          </div>
         </a>
 
         <div className='flex items-center gap-5 whitespace-nowrap'>
